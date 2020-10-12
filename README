@@ -1,0 +1,22 @@
+After successful build copy these folders
+
+root/* to ROMSOURCE/out/target/product/codename/root/*
+system/* to out/target/product/codename/system/*
+
+#
+#	These files are precompiled binaries for extra android su features.
+#
+
+## Currently ported (For the note these all are static for ld, gcc, g++)
+* bash 5.x
+* Perl5 (new)
+* m4 (new)
+* make
+* ncurses (may be broken)
+* readline (new)
+
+# Do port i have simple and short guide
+* use ubuntu 18.04
+* get g++ binutils and gcc for arm-linux-gnueabihf
+* and use CFLAGS="-pie -static" LDFLAGS="-pie -static" CXXFLAGS="-pie -static"
+* also another note all binaries dont support cross compile or dont like the includes/libs u have for the cross compiler. Good luck.
